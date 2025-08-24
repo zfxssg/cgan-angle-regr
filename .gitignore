@@ -1,19 +1,35 @@
-
-# Python
+# --- Python cache ---
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 *.egg-info/
+
+# --- Virtual environments ---
 .venv/
 .env/
+env/
+venv/
 
-# Artifacts
-artifacts/
-results/
+# --- Artifacts ---
+# Ignore everything under artifacts/ except .pth model files
+artifacts/*
+!artifacts/*.pth
+
+# --- Results ---
+# Ignore outputs, but keep placeholder (README.md)
+results/*
+!results/README.md
+
+# --- Data ---
+# Ignore large CSVs, but keep README_DATA.md
+data/*
+!data/README_DATA.md
+
+# --- Generated files ---
 *.pdf
 *.csv
 
-# OS
+# --- OS junk ---
 .DS_Store
 Thumbs.db
